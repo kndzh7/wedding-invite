@@ -690,11 +690,9 @@ footer {
     border: 0;
     display: block;
     height: 100%;
-    left: 50%;
-    min-width: 500px;
+    left: 0;
     position: absolute;
     top: 0;
-    transform: translateX(-50%);
     width: 100%;
   }
 
@@ -806,6 +804,12 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
+  .venue-map .map-2gis {
+    left: 50%;
+    margin-left: -250px;
+    width: 500px;
+  }
+
   .hero .hero-content {
     padding-top: 88%;
   }
