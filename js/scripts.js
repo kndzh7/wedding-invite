@@ -148,9 +148,12 @@ $(document).ready(function () {
         audio.volume = 0.55;
 
         function setPlaying(playing) {
+            var labelOn = btn.getAttribute('data-label-on') || 'Включить музыку';
+            var labelOff = btn.getAttribute('data-label-off') || 'Выключить музыку';
             btn.classList.toggle('is-playing', playing);
             btn.classList.toggle('is-muted', !playing);
-            btn.setAttribute('aria-label', playing ? 'Выключить музыку' : 'Включить музыку');
+            btn.setAttribute('aria-label', playing ? labelOff : labelOn);
+            btn.setAttribute('title', playing ? labelOff : labelOn);
         }
 
         function playMusic() {

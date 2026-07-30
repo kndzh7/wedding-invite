@@ -1,317 +1,48 @@
 <!doctype html>
-<html class="no-js" lang="ru">
+<html lang="ru">
 <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
     <title>Эльдяр &amp; Жамиля - приглашение на свадьбу</title>
-    <meta name="description" content="Приглашаем вас на нашу свадьбу 9 сентября 2026 года.">
+    <meta name="description" content="Приглашение на свадьбу Эльдияра и Жамили. 9 сентября 2026, ресторан Ak Bulut, Бишкек.">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="theme-color" content="#ffffff">
-    <meta property="og:title" content="Эльдяр & Жамиля - приглашение на свадьбу">
-    <meta property="og:description" content="Приглашаем вас на нашу свадьбу 9 сентября 2026 года.">
-    <meta property="og:image" content="img/background.JPEG">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://eldiyar-zhamilia.com/ru/">
+    <link rel="alternate" hreflang="ru" href="https://eldiyar-zhamilia.com/ru/">
+    <link rel="alternate" hreflang="ky" href="https://eldiyar-zhamilia.com/kg/">
+    <link rel="alternate" hreflang="x-default" href="https://eldiyar-zhamilia.com/ru/">
+    <meta property="og:title" content="Эльдяр &amp; Жамиля - приглашение на свадьбу">
+    <meta property="og:description" content="Приглашаем вас на свадьбу 9 сентября 2026 года в ресторане Ak Bulut.">
+    <meta property="og:url" content="https://eldiyar-zhamilia.com/ru/">
+    <meta property="og:image" content="https://eldiyar-zhamilia.com/img/background.JPEG">
     <meta property="og:type" content="website">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="manifest" href="manifest.json">
-    <link rel="mask-icon" href="safari-pinned-tab.svg" color="#5bbad5">
-
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <noscript>
+        <meta http-equiv="refresh" content="0; url=/ru/">
+    </noscript>
     <script>
-        function loadJsFromCDN(js) {
-            if (js === 'jquery.js') {
-                document.write('<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"><\/script>');
+        (function () {
+            var saved = null;
+            try {
+                saved = localStorage.getItem('wedding_lang');
+            } catch (e) {}
+            var lang = 'ru';
+            if (saved === 'kg' || saved === 'ky') {
+                lang = 'kg';
+            } else if (saved === 'ru') {
+                lang = 'ru';
+            } else {
+                var nav = (navigator.languages && navigator.languages[0]) || navigator.language || '';
+                nav = String(nav).toLowerCase();
+                if (nav.indexOf('ky') === 0 || nav.indexOf('kg') === 0) {
+                    lang = 'kg';
+                }
             }
-        }
+            var hash = window.location.hash || '';
+            window.location.replace('/' + lang + '/' + hash);
+        })();
     </script>
-
-    <link rel="stylesheet" href="css/normalize.min.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/jquery.fancybox.css">
-    <link rel="stylesheet" href="css/flexslider.css">
-    <link rel="stylesheet" href="css/styles.min.css">
-    <link rel="stylesheet" href="css/queries.css">
-    <link rel="stylesheet" href="css/custom.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
 </head>
-<body id="top">
-<audio id="bg-music" src="background_music.mp3" loop preload="auto"></audio>
-<div id="intro-gate" class="intro-gate">
-    <div class="intro-gate-card">
-        <p class="intro-gate-names">Эльдияр <span>&amp;</span> Жамиля</p>
-        <p class="intro-gate-hint" data-i18n="intro.hint">Нажмите, чтобы открыть приглашение</p>
-        <button type="button" id="intro-open" class="btn btn-accent btn-small" data-i18n="intro.open">Открыть</button>
-    </div>
-</div>
-<button type="button" id="music-toggle" class="music-toggle is-muted" aria-label="Музыка" title="Музыка" hidden>
-    <i class="fa fa-music"></i>
-</button>
-<section class="hero">
-    <section class="navigation">
-        <header>
-            <div class="header-content">
-                <div class="logo">
-                    <a href="#top" class="brand-mark">Э &amp; Ж</a>
-                </div>
-                <div class="header-nav">
-                    <nav>
-                        <ul class="primary-nav">
-                            <li><a href="#invitation" data-i18n="nav.invite">Приглашение</a></li>
-                            <li><a href="#events" data-i18n="nav.events">Программа</a></li>
-                            <li><a href="#photos" data-i18n="nav.photos">Фото</a></li>
-                            <li><a href="#map" data-i18n="nav.venue">Место</a></li>
-                        </ul>
-                    </nav>
-                </div>
-                <div class="header-toolbar">
-                    <div class="lang-switch">
-                        <button type="button" class="lang-btn active" data-lang="ru">RU</button>
-                        <button type="button" class="lang-btn" data-lang="ky">KG</button>
-                    </div>
-                    <div class="navicon">
-                        <a class="nav-toggle" href="#"><span></span></a>
-                    </div>
-                </div>
-            </div>
-        </header>
-    </section>
-    <div class="container">
-        <div class="row">
-            <div class="col-md-10 col-md-offset-1">
-                <div class="hero-content text-center">
-                    <p class="hero-eyebrow" data-i18n="hero.eyebrow">Приглашение на свадьбу</p>
-                    <h1 class="hero-names">Эльдияр <span>&amp;</span> Жамиля</h1>
-                    <p class="hero-date" data-i18n="hero.date">9 сентября 2026 · 17:00</p>
-                    <p class="hero-venue">РЕСТОРАН "AK BULUT"</p>
-                    <p class="hero-short-date">09.09.26</p>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="down-arrow floating-arrow"><a href="#invitation"><i class="fa fa-angle-down"></i></a></div>
-</section>
-
-<section id="invitation" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="invite-card text-center">
-                    <div class="invite-ornament" aria-hidden="true">✦</div>
-                    <p class="invite-names">Эльдияр <span>&amp;</span> Жамиля</p>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <p class="invite-poem" data-i18n="invite.text">
-                        <span>Сиздерди</span>
-                        <span>балдарыбыздын</span>
-                        <span>үйлөнүү үлпөт тоюна</span>
-                        <span>арналган салтанаттуу</span>
-                        <span>кечесине келип,</span>
-                        <span>ак дасторкондун үстүнө</span>
-                        <span>батаңыздарды берип,</span>
-                        <span>кадырлуу коногубуз</span>
-                        <span>болуп кетүүгө</span>
-                        <span class="invite-finale">чакырабыз</span>
-                    </p>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <p class="invite-date-line" data-i18n="invite.date_line">9 сентября 2026 · 17:00 · Ak Bulut</p>
-                    <p class="invite-hosts" data-i18n="invite.hosts">С уважением Тимур &amp; Назгуль</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section class="events section-padding" id="events">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <h3 class="header" data-i18n="events.title">Программа</h3>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="program-card text-center">
-                    <p class="program-day" data-i18n="events.day">9 сентября 2026</p>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <ul class="program-timeline">
-                        <li>
-                            <span class="program-time">17:00</span>
-                            <span class="program-label" data-i18n="events.item1">Встреча и сбор дорогих гостей</span>
-                        </li>
-                        <li>
-                            <span class="program-time">17:00 — 17:50</span>
-                            <span class="program-label" data-i18n="events.item2">Welcome-зона в ожидании начала торжества</span>
-                        </li>
-                        <li>
-                            <span class="program-time">18:00</span>
-                            <span class="program-label" data-i18n="events.item3">Открытие праздничного вечера</span>
-                        </li>
-                        <li>
-                            <span class="program-time">19:30 — 20:00</span>
-                            <span class="program-label" data-i18n="events.item4">Первый музыкальный антракт</span>
-                        </li>
-                        <li>
-                            <span class="program-time">21:00 — 21:30</span>
-                            <span class="program-label" data-i18n="events.item5">Второй музыкальный антракт</span>
-                        </li>
-                        <li>
-                            <span class="program-time">22:30</span>
-                            <span class="program-label" data-i18n="events.item6">Окончание торжественной программы</span>
-                        </li>
-                    </ul>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <p class="program-place" data-i18n="events.place">Ресторан «Ak Bulut»</p>
-                </div>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2">
-                <div class="dress-block text-center">
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <h4 class="dress-title" data-i18n="dress.title">Dress code</h4>
-                    <p class="dress-text" data-i18n="dress.text">
-                        <strong>Классический, праздничный</strong><br>
-                        Костюмы, платья, нарядные образы — всё, в чём вам будет комфортно и торжественно.
-                    </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="photos" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12 text-center">
-                <h3 data-i18n="photos.title">Фотографии</h3>
-            </div>
-        </div>
-    </div>
-    <div class="container-fluid photo-gallery">
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1492.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1492.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1493.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1493.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1494.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1494.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1495.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1495.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1496.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1496.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1497.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1497.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1498.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1498.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1499.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1499.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4 col-xs-12 photo-item">
-                <a class="fancybox" rel="gallery" href="img/carousel/IMG_1500.jpg">
-                    <div class="img-wrap">
-                        <div class="overlay"><i class="fa fa-search"></i></div>
-                        <img src="img/carousel/IMG_1500.jpg" alt="Эльдияр и Жамиля">
-                    </div>
-                </a>
-            </div>
-        </div>
-    </div>
-</section>
-
-<section id="map" class="section-padding">
-    <div class="container">
-        <div class="row">
-            <div class="col-md-8 col-md-offset-2 text-center">
-                <div class="venue-intro">
-                    <div class="invite-ornament" aria-hidden="true">✦</div>
-                    <h3 data-i18n="map.title">Как добраться?</h3>
-                    <p class="venue-name">Ak Bulut</p>
-                    <p class="venue-address" data-i18n="map.address">ул. 7 апреля, 120/1, Бишкек</p>
-                    <a class="btn btn-accent btn-small venue-btn" target="_blank" rel="noopener"
-                       href="https://2gis.kg/bishkek/firm/70000001101581212">
-                        <i class="fa fa-map-marker"></i>&nbsp;&nbsp;<span data-i18n="map.open_2gis">Открыть в 2GIS</span>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="venue-map">
-        <iframe
-            class="map-2gis"
-            title="Ak Bulut — 2GIS"
-            src="https://widgets.2gis.com/widget?type=firmsonmap&amp;options=%7B%22pos%22%3A%7B%22lat%22%3A42.842787%2C%22lon%22%3A74.635588%2C%22zoom%22%3A16%7D%2C%22opt%22%3A%7B%22city%22%3A%22bishkek%22%7D%2C%22org%22%3A%2270000001101581212%22%7D"
-            allowfullscreen
-            loading="eager"
-            referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-</section>
-
-<footer>
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12 text-center content">
-                <span class="to-top-wrapper"><a href="#top" class="to-top"><i class="fa fa-angle-up"></i></a></span>
-                <p>Эльдияр <span class="fa fa-heart pulse2"></span> Жамиля · 09.09.2026</p>
-            </div>
-        </div>
-    </div>
-</footer>
-
-<script src="js/vendor/jquery-1.11.2.min.js" onerror="loadJsFromCDN('jquery.js')"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/4.0.1/jquery.waypoints.min.js"></script>
-<script src="js/jquery.fancybox.pack.js"></script>
-<script src="js/vendor/bootstrap.min.js"></script>
-<script src="js/jquery.flexslider-min.js"></script>
-<script src="js/jquery.mb.YTPlayer.min.js"></script>
-<script src="js/i18n.js"></script>
-<script src="js/scripts.js"></script>
+<body>
+    <p><a href="/ru/">Русский</a> · <a href="/kg/">Кыргызча</a></p>
 </body>
 </html>
