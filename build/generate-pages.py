@@ -23,7 +23,7 @@ PAGES = {
         "seo.og_locale": "ru_RU",
         "seo.og_locale_alt": "ky_KG",
         "seo.og_title": "Эльдяр & Жамиля - приглашение на свадьбу",
-        "seo.og_description": "Приглашаем вас на свадьбу 9 сентября 2026 года в ресторане Ak Bulut.",
+        "seo.og_description": "Приглашаем Вас на свадьбу 9 сентября 2026 года в ресторане Ak Bulut.",
         "intro.hint": "Нажмите, чтобы открыть приглашение",
         "intro.open": "Открыть",
         "music.on": "Включить музыку",
