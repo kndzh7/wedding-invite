@@ -446,16 +446,21 @@ ul.primary-nav li a {
 }
 
 .dress-text {
-  color: #3d4351;
+  color: rgba(28, 54, 83, 0.6);
+  font-family: Merriweather, Georgia, serif;
   font-size: 17px;
-  line-height: 1.75;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  line-height: 1.65;
   margin: 0;
   padding-bottom: 0;
 }
 
 .dress-text strong {
   display: inline-block;
-  font-weight: 600;
+  font-family: Merriweather, Georgia, serif;
+  font-weight: 400;
+  letter-spacing: 0.5px;
   margin-bottom: 4px;
 }
 
