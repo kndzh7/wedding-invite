@@ -116,7 +116,7 @@
                     <div class="invite-ornament" aria-hidden="true">✦</div>
                     <p class="invite-names">Эльдияр <span>&amp;</span> Жамиля</p>
                     <div class="invite-divider" aria-hidden="true"></div>
-                    <p class="invite-poem">{{invite.text}}</p>
+                    <div class="invite-poem">{{invite.text}}</div>
                     <div class="invite-divider" aria-hidden="true"></div>
                     <p class="invite-date-line">{{invite.date_line}}</p>
                     <p class="invite-hosts">{{invite.hosts}}</p>
@@ -129,43 +129,9 @@
 <section class="events section-padding" id="events">
     <div class="container">
         <div class="row">
-            <div class="col-md-12">
-                <h3 class="header">{{events.title}}</h3>
-            </div>
-        </div>
-        <div class="row">
             <div class="col-md-8 col-md-offset-2">
                 <div class="program-card text-center">
-                    <p class="program-day">{{events.day}}</p>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <ul class="program-timeline">
-                        <li>
-                            <span class="program-time">17:00</span>
-                            <span class="program-label">{{events.item1}}</span>
-                        </li>
-                        <li>
-                            <span class="program-time">17:00 — 17:50</span>
-                            <span class="program-label">{{events.item2}}</span>
-                        </li>
-                        <li>
-                            <span class="program-time">18:00</span>
-                            <span class="program-label">{{events.item3}}</span>
-                        </li>
-                        <li>
-                            <span class="program-time">19:30 — 20:00</span>
-                            <span class="program-label">{{events.item4}}</span>
-                        </li>
-                        <li>
-                            <span class="program-time">21:00 — 21:30</span>
-                            <span class="program-label">{{events.item5}}</span>
-                        </li>
-                        <li>
-                            <span class="program-time">22:30</span>
-                            <span class="program-label">{{events.item6}}</span>
-                        </li>
-                    </ul>
-                    <div class="invite-divider" aria-hidden="true"></div>
-                    <p class="program-place">{{events.place}}</p>
+                    <div class="guest-message">{{events.message}}</div>
                 </div>
             </div>
         </div>

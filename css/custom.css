@@ -272,14 +272,20 @@ ul.primary-nav li a {
   font-size: 18px;
   font-weight: 300;
   letter-spacing: 0.5px;
-  line-height: 1.2;
+  line-height: 1.55;
   margin: 0 auto;
   padding-bottom: 0;
 }
 
+.invite-poem p,
 .invite-poem span {
   display: block;
-  margin: 0 0 10px;
+  margin: 0 0 14px;
+}
+
+.invite-poem p:last-child,
+.invite-poem span:last-child {
+  margin-bottom: 0;
 }
 
 .invite-poem .invite-finale {
@@ -312,7 +318,35 @@ ul.primary-nav li a {
 
 .program-card {
   margin: 0 auto;
-  max-width: 480px;
+  max-width: 640px;
+}
+
+.guest-message {
+  color: #3d4351;
+  font-family: Merriweather, Georgia, serif;
+  font-size: 17px;
+  font-weight: 300;
+  letter-spacing: 0.3px;
+  line-height: 1.65;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.guest-message p {
+  margin: 0 0 18px;
+  padding-bottom: 0;
+}
+
+.guest-message p:last-child {
+  margin-bottom: 0;
+}
+
+.guest-message-title {
+  color: #c4a35a;
+  font-size: 22px;
+  font-weight: 400;
+  letter-spacing: 2px;
+  margin-bottom: 24px !important;
 }
 
 .program-day {
